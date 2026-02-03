@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Scoop | Professional Pet Waste Removal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+        
+        body {
+            font-family: 'Plus+Jakarta+Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .booking-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 50;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .brand-logo-container {
+            width: 52px;
+            height: 52px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .brand-logo-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #16a34a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Grand Launch Promotion Banner -->
+    <div class="bg-green-700 text-white py-2 text-center text-sm font-bold tracking-wide">
+        ⚡ GRAND LAUNCH PROMO: FIRST SCOOP ONLY £7! ⚡ 
+        <a href="#pricing" class="underline ml-2 hover:text-green-200">Claim Offer</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-40 border-b border-slate-100 top-9">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="brand-logo-container">
+                        <img src="brand logo.png" 
+                             alt="Super Scoop Logo" 
+                             class="brand-logo-img">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-extrabold tracking-tight text-green-800 leading-none">SUPER SCOOP</span>
+                        <span class="text-[10px] font-bold text-green-600 tracking-[0.2em] uppercase">Pet Waste Removal</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#about" class="hover:text-green-600 transition">Our Story</a>
+                    <a href="#how-it-works" class="hover:text-green-600 transition">How It Works</a>
+                    <a href="#pricing" class="hover:text-green-600 transition">Pricing</a>
+                </div>
+                <button onclick="toggleModal()" class="bg-green-600 text-white px-6 py-2.5 rounded-full font-semibold hover:bg-green-700 transition shadow-lg shadow-green-200">
+                    Book a Scoop
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-52 pb-16 hero-gradient">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-green-700 uppercase bg-green-100 rounded-full">
+                Professional Waste Removal in Leeds
+            </span>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6 leading-tight">
+                We Scoop. <span class="text-green-600">You Relax.</span><br>Your Garden, Reclaimed.
+            </h1>
+            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto">
+                Reliable, hygienic, and thorough. We take care of the "dirty work" so your family can enjoy the garden safely.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#pricing" class="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-800 transition shadow-xl text-center">
+                    First Scoop for £7
+                </a>
+                <a href="https://wa.me/447000000000" class="bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-green-700 transition flex items-center justify-center gap-2 shadow-xl shadow-green-100">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Book via WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Our Story / The Idea -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-slate-900">Why I Started Super Scoop 🐾</h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        As a dog lover in Leeds, I realized that while we all adore our four-legged friends, nobody actually enjoys the cleanup. Between busy work schedules and unpredictable British weather, the garden often gets neglected.
+                    </p>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        I saw a gap for a service that wasn't just about "picking up poop," but about **hygiene, safety, and time.** I wanted to give Leeds families their outdoor spaces back—places where kids can play without worry and parents can relax without the chore.
+                    </p>
+                    <div class="bg-green-50 p-6 rounded-2xl border-l-4 border-green-600">
+                        <p class="italic text-green-800">"Our mission is simple: to provide a cleaner environment for dogs and their humans, one garden at a time."</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-green-100 w-full h-80 rounded-3xl flex items-center justify-center overflow-hidden shadow-2xl">
+                        <i class="fa-solid fa-house-chimney-window text-green-200 text-9xl absolute -bottom-10 -right-10"></i>
+                        <div class="p-12 text-center relative z-10">
+                            <i class="fa-solid fa-shield-dog text-6xl text-green-600 mb-4"></i>
+                            <h3 class="text-2xl font-bold text-green-800">100% Pet Safe</h3>
+                            <p class="text-green-700">All equipment is sanitized between every visit to prevent the spread of germs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Duties / How It Works -->
+    <section id="how-it-works" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">My Professional Promise</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto">Every visit is conducted with military-grade thoroughness and care. Here is exactly what I do for your garden:</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 card-hover">
+                    <div class="step-number">1</div>
+                    <h3 class="font-bold text-xl mb-3">Grid-Search</h3>
+                    <p class="text-slate-600 text-sm">I walk your lawn in a structured grid pattern to ensure not a single spot is missed.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 card-hover">
+                    <div class="step-number">2</div>
+                    <h3 class="font-bold text-xl mb-3">Waste Removal</h3>
+                    <p class="text-slate-600 text-sm">All waste is carefully bagged and removed from your property. No mess left behind.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 card-hover">
+                    <div class="step-number">3</div>
+                    <h3 class="font-bold text-xl mb-3">Sanitization</h3>
+                    <p class="text-slate-600 text-sm">I spray affected areas with pet-safe disinfectant to kill bacteria and neutralize odors.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 card-hover">
+                    <div class="step-number">4</div>
+                    <h3 class="font-bold text-xl mb-3">Gate Check</h3>
+                    <p class="text-slate-600 text-sm">Safety is priority. I double-check and photograph your locked gate after every visit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Pricing Plans</h2>
+                <p class="text-slate-500">Simple, transparent pricing to keep your garden clean.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Trial -->
+                <div class="bg-yellow-50 p-8 rounded-3xl border-2 border-yellow-400 card-hover relative flex flex-col">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-yellow-900 text-xs font-bold px-4 py-1 rounded-full uppercase">Launch Promo</div>
+                    <h3 class="text-xl font-bold mb-2">The First Scoop</h3>
+                    <p class="text-slate-500 mb-6 text-sm">One-off deep clean trial.</p>
+                    <div class="text-4xl font-extrabold mb-6 text-yellow-700 mt-auto">£7.00</div>
+                    <button onclick="toggleModal('£7 First Scoop')" class="w-full bg-yellow-400 text-yellow-900 py-3 rounded-xl font-bold hover:bg-yellow-500 transition shadow-md">Claim Offer</button>
+                </div>
+
+                <!-- Monthly Subscription (NEW) -->
+                <div class="bg-green-50 p-8 rounded-3xl border-2 border-green-500 card-hover relative flex flex-col shadow-lg">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs font-bold px-4 py-1 rounded-full uppercase">Best Value</div>
+                    <h3 class="text-xl font-bold mb-2">Monthly Sub</h3>
+                    <p class="text-slate-500 mb-6 text-sm">4 weekly visits per month.</p>
+                    <div class="text-4xl font-extrabold mb-6 text-green-700 mt-auto">£45.00 <span class="text-sm font-normal text-slate-400">/mo</span></div>
+                    <button onclick="toggleModal('Monthly Subscription')" class="w-full bg-green-600 text-white py-3 rounded-xl font-bold hover:bg-green-700 transition shadow-md">Subscribe Now</button>
+                </div>
+
+                <!-- Weekly -->
+                <div class="bg-green-900 p-8 rounded-3xl text-white card-hover shadow-xl flex flex-col">
+                    <h3 class="text-xl font-bold mb-2">Weekly Clean</h3>
+                    <p class="text-green-200/60 mb-6 text-sm">Best for multi-dog homes.</p>
+                    <div class="text-4xl font-extrabold mb-6 mt-auto">£12.50 <span class="text-sm font-normal text-green-200/40">/visit</span></div>
+                    <button onclick="toggleModal('Weekly Clean')" class="w-full bg-white text-green-900 py-3 rounded-xl font-bold hover:bg-green-50 transition shadow-md">Select Plan</button>
+                </div>
+
+                <!-- Fortnightly -->
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 card-hover flex flex-col">
+                    <h3 class="text-xl font-bold mb-2">Fortnightly</h3>
+                    <p class="text-slate-500 mb-6 text-sm">Perfect for maintenance.</p>
+                    <div class="text-4xl font-extrabold mb-6 mt-auto">£20.00 <span class="text-sm font-normal text-slate-400">/visit</span></div>
+                    <button onclick="toggleModal('Fortnightly')" class="w-full bg-slate-900 text-white py-3 rounded-xl font-bold hover:bg-slate-800 transition shadow-md">Select Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex flex-col items-center mb-8">
+                <div class="brand-logo-container mb-4">
+                    <img src="brand logo.png" alt="Super Scoop Logo" class="brand-logo-img">
+                </div>
+                <span class="text-xl font-extrabold tracking-tight text-green-800 uppercase leading-none text-center">Super Scoop</span>
+                <span class="text-[10px] font-bold text-slate-400 tracking-[0.3em] uppercase mt-1">Leeds Pet Waste Professionals</span>
+            </div>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-8 mb-12 text-sm font-semibold text-slate-600 uppercase tracking-widest">
+                <a href="mailto:superscoop2025@gmail.com" class="hover:text-green-600 transition">
+                    <i class="fa-solid fa-envelope mr-2"></i> superscoop2025@gmail.com
+                </a>
+                <a href="tel:+447000000000" class="hover:text-green-600 transition">
+                    <i class="fa-solid fa-phone mr-2"></i> Call Us
+                </a>
+                <a href="https://wa.me/447000000000" class="hover:text-green-600 transition">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp
+                </a>
+            </div>
+
+            <p class="text-slate-400 text-xs font-semibold tracking-widest uppercase mb-4">
+                Full Liability Insurance | Pet First Aid Certified | Registered Business
+            </p>
+            <p class="text-slate-400 text-xs font-semibold tracking-widest uppercase">
+                &copy; 2026 Super Scoop. Serving Leeds and surrounding areas.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="booking-modal p-4">
+        <div class="bg-white w-full max-w-md rounded-3xl p-8 relative shadow-2xl">
+            <button onclick="toggleModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900">
+                <i class="fa-solid fa-xmark text-2xl"></i>
+            </button>
+            <h2 class="text-2xl font-bold mb-2 text-center">Book Your Scoop</h2>
+            <p class="text-slate-500 text-sm text-center mb-6">Fill in your details and we'll be in touch to confirm your first visit.</p>
+            
+            <form id="bookingForm" onsubmit="handleFormSubmit(event)">
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Your Name</label>
+                    <input type="text" id="userName" required placeholder="John Doe" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Phone Number</label>
+                    <input type="tel" id="userPhone" required placeholder="07123 456 789" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500">
+                </div>
+                <div class="mb-6">
+                    <label class="block text-xs font-bold text-slate-400 uppercase mb-1">Selected Plan</label>
+                    <select id="modalPlan" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 outline-none focus:ring-2 focus:ring-green-500">
+                        <option value="£7 First Scoop">£7 First Scoop (Launch Offer)</option>
+                        <option value="Monthly Subscription">Monthly Subscription (£45/mo)</option>
+                        <option value="Weekly Clean">Weekly Clean</option>
+                        <option value="Fortnightly">Fortnightly</option>
+                    </select>
+                </div>
+                <button type="submit" id="submitBtn" class="w-full bg-green-600 text-white py-4 rounded-xl font-bold hover:bg-green-700 transition shadow-lg shadow-green-200">
+                    Confirm Request
+                </button>
+                <p class="text-[10px] text-slate-400 mt-4 text-center uppercase tracking-wider font-bold">
+                    Requests are sent directly to our service manager.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleModal(plan = '£7 First Scoop') {
+            const modal = document.getElementById('bookingModal');
+            if (plan && typeof plan === 'string') {
+                document.getElementById('modalPlan').value = plan;
+            }
+            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        async function handleFormSubmit(event) {
+            event.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            const originalText = btn.innerText;
+            
+            // UI Feedback for "Sending"
+            btn.innerText = "Sending Request...";
+            btn.disabled = true;
+            btn.classList.add('opacity-75');
+
+            // Simulate a short delay (network request)
+            setTimeout(() => {
+                // In a production site, this would send an email via a service like Formspree, Netlify Forms, or your own server.
+                const name = document.getElementById('userName').value;
+                const plan = document.getElementById('modalPlan').value;
+                
+                // Show success message
+                const successMsg = `Thank you, ${name}! Your request for the ${plan} has been received. We will contact you shortly at superscoop2025@gmail.com to confirm your slot.`;
+                
+                // Create custom alert/modal feedback instead of native alert
+                const modalContent = document.querySelector('#bookingModal > div');
+                const originalHTML = modalContent.innerHTML;
+                
+                modalContent.innerHTML = `
+                    <div class="text-center py-8">
+                        <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fa-solid fa-check text-3xl"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-4">Request Sent!</h2>
+                        <p class="text-slate-600 mb-8">${successMsg}</p>
+                        <button onclick="location.reload()" class="bg-slate-900 text-white px-8 py-3 rounded-xl font-bold">Close</button>
+                    </div>
+                `;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
